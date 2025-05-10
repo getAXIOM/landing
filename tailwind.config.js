@@ -17,16 +17,21 @@ export default {
         ],
         mono: ['JetBrains Mono', 'monospace']
       },
-      animation: {
-        'bounce': 'bounce 2s infinite',
-      },
       keyframes: {
         bounce: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-15px)' }
-        }
-      }
+          '50%':       { transform: 'translateY(-15px)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%':      { transform: 'translateY(-20px)' },
+        },
+      },
+      animation: {
+        bounce: 'bounce 2s infinite',
+        float:  'float 6s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
-};
+}

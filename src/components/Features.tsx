@@ -55,8 +55,8 @@ const Features: React.FC = () => {
     },
     {
       icon: <FileKey className="h-8 w-8" />,
-      title: "End-to-End Encryption",
-      description: "Your searches are encrypted before leaving your device and can only be decrypted by you.",
+      title: "End-to-End Safety",
+      description: "No funny business here. Just safe, secure searches.",
       delay: 500
     },
     {
