@@ -1,5 +1,6 @@
 import React from 'react';
-import { Search, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import logoSrc from '../img/whiteLogo.svg';
 
 const Footer: React.FC = () => {
   return (
@@ -7,7 +8,16 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center">
-            <Search className="h-5 w-5 mr-2" />
+            <img
+       src={logoSrc}
+          className="
+            absolute inset-0
+            w-1/2 max-w-lg mx-auto
+            opacity-10 pointer-events-none
+             animate-float z-0
+            "
+            alt="AXIOM Logo"
+        />
             <span className="text-sm text-gray-400">
               &copy; {new Date().getFullYear()} AXIOM Search. All rights reserved.
             </span>
