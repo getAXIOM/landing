@@ -22,8 +22,7 @@ const Hero: React.FC = () => {
   }, []);
 
   const handleWaitlistClick = () => {
-    setShowPopup(true);
-    setTimeout(() => setShowPopup(false), 3000);
+    window.open('http://eepurl.com/jeuVSk', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -66,7 +65,7 @@ const Hero: React.FC = () => {
               onClick={handleWaitlistClick}
               className="px-8 py-4 bg-white text-black rounded-full shadow-glow hover:shadow-glow-intense transition-all duration-500 font-medium text-lg"
             >
-              Experience AXIOM
+              Join the Waitlist
             </button>
           </div>
         </div>
