@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           </div>
           
           <a 
-            href="mailto:contact@axiom.search"
+            href="mailto:inquire@useaxiom.net"
             className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
           >
             <Mail className="h-4 w-4" />
