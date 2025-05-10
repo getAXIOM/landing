@@ -44,7 +44,7 @@ const About: React.FC = () => {
             
             <div className="space-y-8">
               {[
-                { number: "01", title: "Revolutionary Algorithm", description: "Our quantum-inspired algorithm understands context and nuance in a way current search engines can't approach." },
+                { number: "01", title: "Revolutionary Algorithm", description: "We use the tried and tested Page Rank algorithm, the very same that the likes of Google use, in AXIOM, along with other custom AXIOM algorithms" },
                 { number: "02", title: "Zero Data Collection", description: "Unlike other search engines, we don't need your data to provide excellent results." },
                 { number: "03", title: "Built for 2028", description: "While others are catching up to yesterday, we're building for tomorrow's information landscape." }
               ].map((item, index) => (
