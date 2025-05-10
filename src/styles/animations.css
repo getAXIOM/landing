@@ -1,0 +1,120 @@
+/* Grid background */
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), 
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* Noise background */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Circuit pattern */
+.bg-circuit-pattern {
+  background-image: radial-gradient(circle at center, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  position: relative;
+}
+
+.bg-circuit-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Text gradient */
+.gradient-text-white {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Shadow glow */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.shadow-glow-intense {
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+/* Feature cards animation */
+.feature-card {
+  opacity: 0;
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+/* Testimonial cards animation */
+.testimonial-card {
+  opacity: 0;
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+/* Reveal text animation */
+.reveal-text {
+  opacity: 0;
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+/* Media queries for responsive animations */
+@media (prefers-reduced-motion: reduce) {
+  .bg-grid, 
+  .feature-card,
+  .testimonial-card,
+  .reveal-text,
+  .animate-slide-up,
+  .animate-fade-in,
+  .animate-bounce {
+    animation: none !important;
+    transition: none !important;
+  }
+}
