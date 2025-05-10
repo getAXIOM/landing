@@ -12,7 +12,8 @@ const Footer: React.FC = () => {
               src={searchLogo}
               alt="AXIOM Search logo"
               className="h-6 w-auto mr-2"
-            />
+            /> 
+            <span className="font-blanka">AXIOM</span>
             <span className="text-sm text-gray-400">
               &copy; {new Date().getFullYear()} AXIOM Search. All rights reserved.
             </span>
