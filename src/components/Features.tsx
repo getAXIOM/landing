@@ -68,7 +68,7 @@ const Features: React.FC = () => {
     {
       icon: <Cpu className="h-8 w-8" />,
       title: "AI Assitant",
-      description: "Our AI systems help with every day tasks, and help you learn more about the world around you.",
+      description: "Our AI systems help with everyday tasks, and help you learn more about the world around you.",
       delay: 700
     },
     {
