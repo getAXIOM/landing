@@ -15,7 +15,8 @@ export default {
           'Arial',
           'sans-serif'
         ],
-        mono: ['JetBrains Mono', 'monospace']
+        mono: ['JetBrains Mono', 'monospace'],
+        blanka: ['Blanka', 'sans-serif'],      
       },
       keyframes: {
         bounce: {

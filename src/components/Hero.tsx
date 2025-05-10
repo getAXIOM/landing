@@ -32,16 +32,15 @@ const Hero: React.FC = () => {
       style={{ background: 'radial-gradient(circle at center, #333 0%, #000 70%)' }}
     >
       <img
-       src={logoSrc}
-       className="
-         absolute inset-0
-         w-1/2 max-w-lg mx-auto
-         opacity-10 pointer-events-none
-         animate-float z-0
+        src={logoSrc}
+        className="
+          absolute inset-0
+          w-1/2 max-w-lg mx-auto
+          opacity-10 pointer-events-none
+          animate-float z-0
         "
         alt="AXIOM Logo"
-     />
-
+      />
 
       {/* grid background */}
       <div className="absolute inset-0 bg-grid"></div>
@@ -51,7 +50,7 @@ const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 ref={titleRef} className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter">
             <span className="block text-transparent bg-clip-text gradient-text-white pb-2">
-              A is for AXIOM
+              A is for <span className="font-blanka">AXIOM</span>
             </span>
             <span className="block text-2xl md:text-3xl lg:text-4xl mt-3 font-light">
               your home sweet home
