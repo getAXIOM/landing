@@ -31,7 +31,7 @@ const Features: React.FC = () => {
   const features = [
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Military-Grade Encryption",
+      title: "Highest-Tier Encryption",
       description: "Every search is protected with state-of-the-art encryption, ensuring your queries remain completely private.",
       delay: 100
     },
@@ -49,8 +49,8 @@ const Features: React.FC = () => {
     },
     {
       icon: <Server className="h-8 w-8" />,
-      title: "Decentralized Infrastructure",
-      description: "Our network of secure nodes ensures no single point of failure and resistance to surveillance.",
+      title: "Easy to use",
+      description: "Our simple to use interface makes it easy to search without worrying about your privacy.",
       delay: 400
     },
     {
@@ -61,20 +61,20 @@ const Features: React.FC = () => {
     },
     {
       icon: <Lock className="h-8 w-8" />,
-      title: "Quantum-Resistant Security",
-      description: "Built with post-quantum cryptography to protect against future quantum computing threats.",
+      title: "Privacy, done beautifully",
+      description: "Your searches, your secret.",
       delay: 600
     },
     {
       icon: <Cpu className="h-8 w-8" />,
-      title: "AI Privacy Guard",
-      description: "Our AI systems work with encrypted data, never seeing your actual searches while still delivering personalized results.",
+      title: "AI Assitant",
+      description: "Our AI systems help with every day tasks, and help you learn more about the world around you.",
       delay: 700
     },
     {
       icon: <UserCheck className="h-8 w-8" />,
-      title: "Anonymous Accounts",
-      description: "Create an account without revealing personal information - we only need a key, not your identity.",
+      title: "Integrated Accounts",
+      description: "Create an account to save pages, preferences, and log into your favorite sites.",
       delay: 800
     }
   ];
