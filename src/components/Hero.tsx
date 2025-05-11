@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             </span>
           </h1>
           <p ref={subtitleRef} className="text-lg md:text-xl lg:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto">
-            The jewel of the BnL fleet - the AXIOM. The search engine of 2028.
+            "The jewel of the BnL fleet - the AXIOM!" The search engine of 2028.
           </p>
           <div className="flex justify-center">
             <button
