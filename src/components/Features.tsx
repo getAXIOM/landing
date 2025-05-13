@@ -85,7 +85,7 @@ const Features: React.FC = () => {
       id="features"
       className="py-24 md:py-32 relative bg-black"
     >
-      <div className="absolute inset-0 bg-noise opacity-10"></div>
+      {/* <div className="absolute inset-0 bg-noise opacity-10"></div> */}
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-24 reveal-text">
