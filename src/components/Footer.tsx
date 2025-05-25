@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, FileText } from 'lucide-react'; 
 import searchLogo from '../img/white.png';
 
 const Footer: React.FC = () => {
@@ -19,13 +19,24 @@ const Footer: React.FC = () => {
             </span>
           </div>
 
-          <a
-            href="mailto:inquire@useaxiom.net"
-            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            <Mail className="h-4 w-4" />
-            <span className="text-sm">Get in touch</span>
-          </a>
+          <div className="flex flex-col items-end gap-1">
+            <a
+              href="mailto:inquire@useaxiom.net"
+              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              <Mail className="h-4 w-4" />
+              <span className="text-sm">Get in touch</span>
+            </a>
+            <a
+              href="/whitepaper.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              <FileText className="h-4 w-4" />
+              <span className="text-sm">Read The Whitepaper</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
