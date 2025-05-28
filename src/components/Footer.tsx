@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, FileText } from 'lucide-react'; 
+import { FaDiscord } from 'react-icons/fa'; // Add this import
 import searchLogo from '../img/white.png';
 
 const Footer: React.FC = () => {
@@ -35,6 +36,15 @@ const Footer: React.FC = () => {
             >
               <FileText className="h-4 w-4" />
               <span className="text-sm">Read The Whitepaper</span>
+            </a>
+            <a
+              href="https://discord.gg/hk8f3KjRTH"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              <FaDiscord className="h-4 w-4" />
+              <span className="text-sm">Join the Discord</span>
             </a>
           </div>
         </div>
