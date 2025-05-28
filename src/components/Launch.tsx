@@ -62,7 +62,7 @@ const Launch: React.FC = () => {
 
       <div className="w-full flex flex-col items-center mt-6 sm:mt-8 z-30 relative">
         <div className="text-base sm:text-lg md:text-xl text-gray-400 mb-2 sm:mb-3 font-medium tracking-wide">
-          Available on:
+          Will be available on:
         </div>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {platformIcons.map((item, idx) => (
