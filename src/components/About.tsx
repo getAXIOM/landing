@@ -44,7 +44,7 @@ const About: React.FC = () => {
             
             <div className="space-y-8">
               {[
-                { number: "01", title: "We Take the Blame", description: "AXIOM takes the blame for your searches online, making you completely anonymous. Your queries can never be traced back to you." },
+                { number: "01", title: "We Take the Blame", description: "AXIOM takes the blame for your searches online, making you as anonymous as you can get. It is nearly impossible to trace queries back to you." },
                 { number: "02", title: "Zero Data Collection", description: "Unlike other search engines, we don't need your data to provide excellent results." },
                 { number: "03", title: "Built for 2028", description: "While others are catching up to yesterday, we're building for tomorrow's information landscape." }
               ].map((item, index) => (
