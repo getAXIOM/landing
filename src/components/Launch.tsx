@@ -18,7 +18,7 @@ const Launch: React.FC = () => {
     <section
       ref={sectionRef}
       id="axiom-launch"
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-32 overflow-hidden"
       style={{
         background: 'linear-gradient(to bottom, #18181b 0%, #000 100%)',
       }}
@@ -26,9 +26,9 @@ const Launch: React.FC = () => {
       <div className="pointer-events-none absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black via-transparent to-transparent z-10" />
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
 
-      <div className="w-full flex flex-col items-center mb-16 z-30 relative">
+      <div className="w-full flex flex-col items-center mb-10 sm:mb-16 z-30 relative">
         <h2
-          className="text-6xl md:text-8xl font-semibold text-center"
+          className="text-4xl sm:text-6xl md:text-8xl font-semibold text-center"
           style={{
             fontFamily: 'Blanka, sans-serif',
             letterSpacing: '0.04em',
@@ -42,16 +42,16 @@ const Launch: React.FC = () => {
         >
           Launch
         </h2>
-        <div className="text-xl md:text-3xl text-gray-300 font-medium tracking-wide">
+        <div className="text-base sm:text-xl md:text-3xl text-gray-300 font-medium tracking-wide">
           The browser by AXIOM for <span className="text-white font-bold">YOU</span>
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mb-12">
+      <div className="flex flex-col items-center justify-center mb-8 sm:mb-12">
         <img
           src="/launchico.png"
           alt="AXIOM Launch Icon"
-          className="w-[400px] h-[400px] object-contain drop-shadow-2xl"
+          className="w-40 h-40 sm:w-72 sm:h-72 md:w-[400px] md:h-[400px] object-contain drop-shadow-2xl"
           style={{
             transform: 'rotateY(24deg) rotateX(12deg) scale(1.18)',
             filter: 'brightness(1.1) drop-shadow(0 8px 32px #a78bfa88)',
@@ -60,11 +60,11 @@ const Launch: React.FC = () => {
         />
       </div>
 
-      <div className="w-full flex flex-col items-center mt-8 z-30 relative">
-        <div className="text-lg md:text-xl text-gray-400 mb-3 font-medium tracking-wide">
+      <div className="w-full flex flex-col items-center mt-6 sm:mt-8 z-30 relative">
+        <div className="text-base sm:text-lg md:text-xl text-gray-400 mb-2 sm:mb-3 font-medium tracking-wide">
           Available for:
         </div>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {platformIcons.map((item, idx) => (
             <span key={idx} title={item.label}>
               {item.icon}
@@ -72,7 +72,7 @@ const Launch: React.FC = () => {
           ))}
         </div>
       </div>
-
+      
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-indigo-800/30 via-purple-700/20 to-pink-700/30 rounded-full blur-3xl opacity-60 animate-pulse" />
       </div>
