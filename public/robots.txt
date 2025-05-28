@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://useaxiom.net/sitemap.xml
