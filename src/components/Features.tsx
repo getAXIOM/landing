@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { useParallax } from '../hooks/useParallax';
 import { Lock, Shield, Key, UserCheck, Cpu, Eye, Server, FileKey } from 'lucide-react';
 
 interface FeatureCardProps {
@@ -7,13 +6,16 @@ interface FeatureCardProps {
   title: string;
   description: string;
   delay: number;
+  index: number;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, delay }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, delay, index }) => {
   return (
     <div 
       className="bg-black backdrop-blur-sm border border-gray-800 rounded-2xl p-6 md:p-8 hover:border-gray-700 transition-all duration-500 feature-card transform hover:translate-y-[-4px]"
       style={{ animationDelay: `${delay}ms` }}
+      data-scroll
+      data-scroll-speed={0.1 + (index * 0.05)}
     >
       <div className="mb-6 rounded-full bg-white/5 p-4 w-16 h-16 flex items-center justify-center">
         {icon}
@@ -26,7 +28,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, del
 
 const Features: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  useParallax(sectionRef, 0.05);
   
   const features = [
     {
@@ -84,20 +85,37 @@ const Features: React.FC = () => {
       ref={sectionRef}
       id="features"
       className="py-24 md:py-32 relative bg-black"
+      data-scroll-section
     >
       {/* <div className="absolute inset-0 bg-noise opacity-10"></div> */}
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 md:mb-24 reveal-text">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+        <div 
+          className="text-center mb-16 md:mb-24 reveal-text"
+          data-scroll
+          data-scroll-speed="0.1"
+        >
+          <h2 
+            className="text-3xl md:text-5xl font-bold mb-6 tracking-tight"
+            data-scroll
+            data-scroll-speed="0.2"
+          >
             Security First, No Compromises
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p 
+            className="text-lg text-gray-400 max-w-2xl mx-auto"
+            data-scroll
+            data-scroll-speed="0.15"
+          >
             AXIOM is built from the ground up with security and privacy as its core foundation, not as an afterthought.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+          data-scroll
+          data-scroll-speed="0.05"
+        >
           {features.map((feature, index) => (
             <FeatureCard 
               key={index}
@@ -105,6 +123,7 @@ const Features: React.FC = () => {
               title={feature.title}
               description={feature.description}
               delay={feature.delay}
+              index={index}
             />
           ))}
         </div>

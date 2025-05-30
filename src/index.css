@@ -1,3 +1,4 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +8,15 @@
   src: url('fonts/Blanka-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

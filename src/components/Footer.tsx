@@ -5,10 +5,21 @@ import searchLogo from '../img/white.png';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white border-t border-gray-800">
-      <div className="container mx-auto px-4 py-8">
+    <footer 
+      className="bg-black text-white border-t border-gray-800"
+      data-scroll-section
+    >
+      <div 
+        className="container mx-auto px-4 py-8"
+        data-scroll
+        data-scroll-speed="0.1"
+      >
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center">
+          <div 
+            className="flex items-center"
+            data-scroll
+            data-scroll-speed="0.2"
+          >
             <img
               src={searchLogo}
               alt="AXIOM Search logo"
@@ -20,7 +31,11 @@ const Footer: React.FC = () => {
             </span>
           </div>
 
-          <div className="flex flex-col items-end gap-1">
+          <div 
+            className="flex flex-col items-end gap-1"
+            data-scroll
+            data-scroll-speed="0.15"
+          >
             <a
               href="mailto:inquire@useaxiom.net"
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"

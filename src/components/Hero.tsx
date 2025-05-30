@@ -1,25 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useParallax } from '../hooks/useParallax';
+import React, { useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import logoSrc from '../img/whiteLogo.svg';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
   const [showPopup, setShowPopup] = useState(false);
-
-  useParallax(heroRef);
-
-  useEffect(() => {
-    const onScroll = () => {
-      const scrollY = window.scrollY;
-      titleRef.current!.style.transform    = `translateY(${scrollY * 0.2}px)`;
-      subtitleRef.current!.style.transform = `translateY(${scrollY * 0.1}px)`;
-    };
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   const handleWaitlistClick = () => {
     window.open('http://eepurl.com/jeuVSk', '_blank', 'noopener,noreferrer');
@@ -29,6 +14,7 @@ const Hero: React.FC = () => {
     <section
       ref={heroRef}
       className="min-h-screen flex flex-col justify-center relative overflow-hidden"
+      data-scroll-section
       style={{ background: 'radial-gradient(circle at center, #333 0%, #000 70%)' }}
     >
       <img
@@ -40,6 +26,8 @@ const Hero: React.FC = () => {
           animate-float z-0
         "
         alt="AXIOM Logo"
+        data-scroll
+        data-scroll-speed="-0.3"
       />
 
       {/* grid background */}
@@ -48,18 +36,38 @@ const Hero: React.FC = () => {
       {/* main content */}
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 ref={titleRef} className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter">
-            <span className="block text-transparent bg-clip-text gradient-text-white pb-2">
+          <h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter"
+            data-scroll
+            data-scroll-speed="0.1"
+          >
+            <span 
+              className="block text-transparent bg-clip-text gradient-text-white pb-2"
+              data-scroll
+              data-scroll-speed="0.2"
+            >
               A is for <span className="font-blanka">AXIOM</span>
             </span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl mt-3 font-light">
+            <span 
+              className="block text-2xl md:text-3xl lg:text-4xl mt-3 font-light"
+              data-scroll
+              data-scroll-speed="0.15"
+            >
               your home sweet home
             </span>
           </h1>
-          <p ref={subtitleRef} className="text-lg md:text-xl lg:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto">
+          <p 
+            className="text-lg md:text-xl lg:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto"
+            data-scroll
+            data-scroll-speed="0.05"
+          >
             "The jewel of the BnL fleet - the AXIOM!" The search engine of 2028.
           </p>
-          <div className="flex flex-col items-center justify-center">
+          <div 
+            className="flex flex-col items-center justify-center"
+            data-scroll
+            data-scroll-speed="0.3"
+          >
             <button
               onClick={handleWaitlistClick}
               className="px-8 py-4 bg-white text-black rounded-full shadow-glow hover:shadow-glow-intense transition-all duration-500 font-medium text-lg"
@@ -95,7 +103,11 @@ const Hero: React.FC = () => {
       </div>
 
       {/* scroll indicator */}
-      <div className="absolute bottom-12 left-0 right-0 flex justify-center animate-bounce">
+      <div 
+        className="absolute bottom-12 left-0 right-0 flex justify-center animate-bounce"
+        data-scroll
+        data-scroll-speed="0.5"
+      >
         <ChevronDown size={32} className="text-white/70" />
       </div>
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
